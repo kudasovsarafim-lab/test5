@@ -13,3 +13,4 @@ while game:
             game = False
     display.update()
     timer.tick(60)
+    
