@@ -24,11 +24,11 @@ while game:
     keys = key.get_pressed()
     if keys[K_w] and player_left.rect.y > 0:
         player_left.rect.y -= 10
-    if keys[K_s] and player_left.rect.y > 600:
+    if keys[K_s] and player_left.rect.y < 600:
         player_left.rect.y += 10
     if keys[K_UP] and player_right.rect.y > 0:
         player_right.rect.y -= 10
-    if keys[K_DOWN] and player_right.rect.y > 600:
+    if keys[K_DOWN] and player_right.rect.y < 600:
         player_right.rect.y += 10
     window.fill((200, 200, 255))
     for e in event.get():
