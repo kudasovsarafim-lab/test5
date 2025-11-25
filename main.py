@@ -16,10 +16,18 @@ class GameSprite(sprite.Sprite):
     def draw(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
 
+player_left = GameSprite('platform.png', 5, 300)
+player_right = GameSprite('platform.png', 865, 300)
+ball = GameSprite('ball.png', 400, 350, width=100, height=100)
+
+
 while game:
     window.fill((200, 200, 255))
     for e in event.get():
         if e.type == QUIT:
             game = False
+    player_left.draw()
+    player_right.draw()
+    ball.draw()
     display.update()
     timer.tick(60)
